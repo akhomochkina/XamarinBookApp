@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ecomm.Login"
+             NavigationPage.HasNavigationBar="False">
+    
+    <AbsoluteLayout x:Name="ViewLayout">
+        <Image Source="bg1.png" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" />
+
+        <StackLayout Orientation="Vertical" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+            <!--<Label Text="Welcome Back!" FontSize="Medium" Margin="10" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>-->
+            <Entry x:Name="useremail" Placeholder="Email" FontSize="Medium" WidthRequest="250" ReturnType="Next" Margin="0,50,0,0"/>
+            <Entry x:Name="userpassword" Placeholder="Password" IsPassword="True" FontSize="Medium" WidthRequest="250" ReturnType="Done"/>
+            <Button Text="Login" BackgroundColor="#77000000" WidthRequest="250" BorderRadius="4" BorderColor="#e6be8a" BorderWidth="3" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,30,0,0" Clicked="Button_Clicked_Login"/>
+            <Button Text="Go Back" BackgroundColor="Transparent" TextColor="ForestGreen" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked_Back"/>
+
+        </StackLayout>
+
+    </AbsoluteLayout>
+</ContentPage>

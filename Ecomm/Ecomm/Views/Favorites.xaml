@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ecomm.Views.Favorites"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
+             Title="Favorites"
+             BackgroundImageSource="bg1" >
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Delete"  Priority="1" Clicked="ToolbarItem_Clicked"  />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content >
+        <AbsoluteLayout Margin="5" BackgroundColor="Transparent">
+            <ScrollView  Margin="0,0,0,50">
+                <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="0,0,0,50" >
+                    <ListView x:Name="listBook"
+                                  HasUnevenRows="True"
+                                  IsVisible="True" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="50">
+                                        <Image Source="{Binding image}" />
+                                        <Label Text="{Binding title}" FontAttributes="Bold" TextColor="Black" FontSize="16" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding price}" FontSize="15"  HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Id}" IsVisible="false"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </FlexLayout>
+            </ScrollView>
+        </AbsoluteLayout>       
+    </ContentPage.Content>
+</ContentPage>

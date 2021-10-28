@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ecomm.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <AbsoluteLayout x:Name="ViewLayout">
+        <Image Source="bg.jpg" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" />
+
+        <StackLayout Orientation="Vertical" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+            <Label Text="Welcome To ShopBookApp" FontSize="Medium" Margin="20" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="Login" BackgroundColor="#77000000" WidthRequest="150" BorderRadius="4" BorderColor="#e6be8a" BorderWidth="3" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Margin="20" Clicked="Button_Clicked_L"/>
+            <Button Text="Register" BackgroundColor="#77000000" WidthRequest="150" BorderRadius="4" BorderColor="#e6be8a" BorderWidth="3" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked_R"/>
+              
+        </StackLayout>
+       
+    </AbsoluteLayout>
+
+</ContentPage>
